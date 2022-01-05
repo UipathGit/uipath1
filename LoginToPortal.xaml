@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="LoginToPortal" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="822,1559.33333333333" sap2010:WorkflowViewState.IdRef="LoginToPortal_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="LoginToPortal" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="822,1562.66666666667" sap2010:WorkflowViewState.IdRef="LoginToPortal_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -64,7 +64,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="LoginToPortal" sap:VirtualizedContainerService.HintSize="832,1494.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="LoginToPortal" sap:VirtualizedContainerService.HintSize="832,1498" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strPassword" />
       <Variable x:TypeArguments="x:Boolean" Name="IsLoginSucces" />
@@ -74,13 +74,14 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" ContinueOnError="True" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="790,1269.33333333333" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="www.victoriassecret.com/us/account/signin">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="790,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;LoginTo Protal workflow has started&quot;]" />
+    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" ContinueOnError="True" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="790,1271.33333333333" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="www.victoriassecret.com/us/account/signin">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="756,1167.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence sap:VirtualizedContainerService.HintSize="756,1168.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -93,7 +94,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_2" />
-              <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into Username" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="824bhavya@gmail.com">
+              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Into Username" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True" Text="824bhavya@gmail.com">
                 <ui:TypeInto.Target>
                   <ui:Target Element="{x:Null}" Id="bbfc829f-1943-475b-8ae5-faac714c86b3" InformativeScreenshot="ae7fbd40b001f6dc6fe68a04cd5512d2" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Sign In -- Victoria&amp;apos;s Secret - Google Chrome' /&gt;&lt;wnd aaname='Horizontal' cls='Chrome_RenderWidgetHostHWND' title='Chrome Legacy Window' /&gt;">
                     <ui:Target.ClippingRegion>
@@ -109,7 +110,7 @@
                 </ui:TypeInto.Target>
               </ui:TypeInto>
               <ui:GetPassword DisplayName="Get Password" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="GetPassword_1" ProtectedPassword="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA+EETSoafYkOeK89aCO7eKwAAAAACAAAAAAAQZgAAAAEAACAAAADKE1Hva0KdV1K1wM+O3LBb/TEp7mGfwFz8YQ/fJg3DzAAAAAAOgAAAAAIAACAAAAAVe1FJ3TH0q/XDjXxK2wDX+d/k3KrnPYtX42CqEF1r6hAAAAAESwAYksSj/G+3kPXZNe2BQAAAABDeCrOKPecNPCQJwoKjpd3GF1hDV/areu/2bSmePHvLifDe/4musjPFEJieUFJuPOyjLrYAgVKZwYKyBs6Iqks=" Result="[strPassword]" />
-              <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into Password" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="[strPassword]">
+              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Into Password" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_3" SimulateType="True" Text="[strPassword]">
                 <ui:TypeInto.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="da77cde6-2e71-4e5b-85ba-4307b4cc0cd0" InformativeScreenshot="f5a666bc0f843ff1f9e51e0e593fcc26" Selector="&lt;webctrl tag='INPUT' type='password' /&gt;">
                     <ui:Target.TimeoutMS>
@@ -153,7 +154,7 @@
                 </ui:Target>
               </ui:UiElementExists.Target>
             </ui:UiElementExists>
-            <If Condition="[IsLoginSucces]" sap:VirtualizedContainerService.HintSize="714,219.333333333333" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[IsLoginSucces]" sap:VirtualizedContainerService.HintSize="714,220.666666666667" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
                 <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Login Success&quot;]" />
               </If.Then>
@@ -164,13 +165,6 @@
           </Sequence>
         </ActivityAction>
       </ui:OpenBrowser.Body>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
     </ui:OpenBrowser>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="790,93.3333333333333" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;LoginToPortal workflow has ended&quot;]" />
   </Sequence>
 </Activity>
